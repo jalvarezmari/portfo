@@ -9,6 +9,11 @@ import csv
 
 app = Flask(__name__)
 
+@app.route('/')
+def generator(page):
+    return render_template('index.html')
+
+
 @app.route('/<string:page>')
 def generator(page):
     return render_template(page)
